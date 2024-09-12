@@ -17,6 +17,7 @@ using Africuisine.Domain.Interfaces.Ingredients;
 using Africuisine.Domain.Repositories.Services;
 using Africuisine.Infrastructure.Services.Files;
 using Africuisine.Infrastructure.Services.Logger;
+using Africuisine.Application.Contracts.Repositories.Users;
 
 namespace Africuisine.Infrastructure.Extensions
 {
@@ -84,6 +85,7 @@ namespace Africuisine.Infrastructure.Extensions
             services.AddScoped<IIngrCategoryRepository, IngrCategoryRepository>();
             services.AddScoped<IMeasurementRepository, MeasurementRepository>();
             services.AddScoped<IProfileRepository, ProfileRepository>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
             return services;
         }
     }
